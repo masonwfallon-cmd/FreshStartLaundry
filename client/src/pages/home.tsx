@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Clock, MapPin, Star, Sparkles, Settings, DollarSign, Shield, Menu, X } from "lucide-react";
-import { FaFacebookF, FaTshirt, FaWind, FaHandsWash, FaHome, FaSoap } from "react-icons/fa";
+import { FaFacebookF, FaTshirt, FaWind, FaHandsWash, FaHome, FaSoap, FaTruck } from "react-icons/fa";
 import { useState } from "react";
 
 
@@ -242,6 +242,26 @@ export default function Home() {
                   <div className="flex justify-between">
                     <span className="text-gray-600">Large Throw Blanket</span>
                     <span className="font-semibold text-fresh-blue" data-testid="text-price-large-throw">$12.00</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Pickup & Delivery Service */}
+            <Card className="hover:shadow-lg transition-shadow" data-testid="card-service-pickup-delivery">
+              <CardContent className="p-6">
+                <div className="text-fresh-blue text-3xl mb-4">
+                  <FaTruck />
+                </div>
+                <h4 className="text-xl font-semibold text-gray-900 mb-3" data-testid="text-service-pickup-title">Pickup & Delivery</h4>
+                <p className="text-gray-600 mb-4" data-testid="text-service-pickup-description">Complimentary pickup and delivery service for your convenience.</p>
+                <div className="space-y-2">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">All Items</span>
+                    <span className="font-semibold text-fresh-blue" data-testid="text-price-pickup-delivery">$1.60/lb</span>
+                  </div>
+                  <div className="mt-3 p-3 bg-fresh-blue-light rounded-lg">
+                    <p className="text-sm text-fresh-blue font-medium">Free pickup and delivery within service area</p>
                   </div>
                 </div>
               </CardContent>
