@@ -127,7 +127,7 @@ export default function Home() {
               Complete Laundry Services
             </h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="text-services-description">
-              From self-service washing to professional cleaning, we offer comprehensive laundry solutions at competitive prices.
+              From self-service washing to professional cleaning with complimentary pickup and delivery, we offer comprehensive laundry solutions at competitive prices.
             </p>
           </div>
 
