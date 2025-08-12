@@ -30,7 +30,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-fresh-blue" data-testid="text-company-name">Fresh Start Laundry Co.</h1>
+              <img 
+                src="@assets/434250957_6929304850509572_7110639757229494361_n_1755013469187.jpg" 
+                alt="Fresh Start Laundry Co. Logo" 
+                className="h-12 w-auto"
+                data-testid="img-company-logo"
+              />
             </div>
             <div className="hidden md:flex items-center space-x-6 text-sm">
               <div className="flex items-center text-gray-600">
@@ -103,10 +108,10 @@ export default function Home() {
             </div>
             <div className="hidden lg:block">
               <img 
-                src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Modern laundromat facility" 
-                className="rounded-2xl shadow-2xl w-full h-auto"
-                data-testid="img-hero-laundromat"
+                src="@assets/434250957_6929304850509572_7110639757229494361_n_1755013469187.jpg" 
+                alt="Fresh Start Laundry Co. Logo" 
+                className="rounded-2xl shadow-2xl w-full h-auto max-w-md mx-auto"
+                data-testid="img-hero-logo"
               />
             </div>
           </div>
