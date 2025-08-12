@@ -4,6 +4,16 @@
 
 Fresh Start Laundry Co. is a professional laundromat website built as a full-stack application showcasing modern web development practices. The application features a React-based frontend with a Node.js/Express backend, designed to provide information about laundromat services in Churchton, MD. The codebase demonstrates a clean separation between client and server code with shared type definitions and database schema.
 
+## Recent Changes (August 12, 2025)
+
+**Deployment Fixes Applied:**
+- Added comprehensive error handling to server startup with try-catch blocks
+- Implemented proper NODE_ENV detection for production mode
+- Fixed error handler to prevent application crashes (removed error throwing)
+- Added detailed error logging for server startup failures
+- Created public directory structure for static asset serving
+- Ensured logo.jpg is available at both client/public and root public paths
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
