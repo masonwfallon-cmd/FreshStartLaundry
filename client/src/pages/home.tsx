@@ -21,7 +21,7 @@ export default function Home() {
   };
 
   const openFacebook = () => {
-    window.open('https://facebook.com', '_blank');
+    window.open('https://www.facebook.com/people/Fresh-Start-Laundry-Co/61557575921146/', '_blank');
   };
 
   return (
@@ -407,14 +407,17 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <Button 
-                    onClick={getDirections}
-                    className="w-full bg-fresh-blue text-white py-3 px-6 font-semibold hover:bg-fresh-blue-dark"
-                    data-testid="button-directions"
-                  >
-                    <MapPin className="mr-2 h-4 w-4" />
-                    Get Directions
-                  </Button>
+                  <div className="flex items-center">
+                    <MapPin className="text-fresh-blue mr-3 h-5 w-5" />
+                    <a 
+                      href="#" 
+                      onClick={(e) => { e.preventDefault(); getDirections(); }}
+                      className="text-gray-900 font-medium hover:text-fresh-blue transition-colors"
+                      data-testid="link-directions"
+                    >
+                      Get Directions
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -534,7 +537,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p data-testid="text-copyright">&copy; 2024 Fresh Start Laundry Co. All rights reserved.</p>
+            <p data-testid="text-copyright">&copy; 2025 Fresh Start Laundry Co. All rights reserved.</p>
           </div>
         </div>
       </footer>
