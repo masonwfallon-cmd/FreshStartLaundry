@@ -17,7 +17,7 @@ export default function Home() {
   };
 
   const getDirections = () => {
-    window.open('https://www.google.com/maps/search/5623+Shady+Side+Road+Churchton+MD+20733');
+    window.open('https://www.google.com/maps/search/5471+Deale+Churchton+Rd+Churchton+MD+20733');
   };
 
   const openFacebook = () => {
@@ -366,7 +366,7 @@ export default function Home() {
                     <div className="flex items-start">
                       <MapPin className="text-fresh-blue mt-1 mr-3 h-5 w-5" />
                       <div>
-                        <p className="text-gray-900 font-medium" data-testid="text-address-street">5623 Shady Side Road</p>
+                        <p className="text-gray-900 font-medium" data-testid="text-address-street">5471 Deale Churchton Rd</p>
                         <p className="text-gray-600" data-testid="text-address-city">Churchton, MD 20733</p>
                       </div>
                     </div>
@@ -394,7 +394,7 @@ export default function Home() {
                   </div>
                   <div>
                     <iframe
-                      src="https://maps.google.com/maps?width=100%&height=200&hl=en&q=5623%20Shady%20Side%20Road,%20Churchton,%20MD%2020733&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                      src="https://maps.google.com/maps?width=100%&height=200&hl=en&q=5471%20Deale%20Churchton%20Rd,%20Churchton,%20MD%2020733&t=&z=15&ie=UTF8&iwloc=&output=embed"
                       width="100%"
                       height="200"
                       style={{ border: 0 }}
@@ -517,7 +517,7 @@ export default function Home() {
             <div>
               <h5 className="font-semibold mb-4" data-testid="text-footer-contact-title">Contact Info</h5>
               <div className="space-y-2 text-gray-300">
-                <p data-testid="text-footer-address">5623 Shady Side Road, Churchton, MD 20733</p>
+                <p data-testid="text-footer-address">5471 Deale Churchton Rd, Churchton, MD 20733</p>
                 <p data-testid="text-footer-phone">(410) 867-1694</p>
                 <p data-testid="text-footer-hours">Open Daily: 7:30am - 6:00pm</p>
               </div>
