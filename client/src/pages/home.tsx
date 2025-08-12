@@ -361,34 +361,49 @@ export default function Home() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900" data-testid="text-location-title">Location & Contact</h3>
                 </div>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <MapPin className="text-fresh-blue mt-1 mr-3 h-5 w-5" />
-                    <div>
-                      <p className="text-gray-900 font-medium" data-testid="text-address-street">5623 Shady Side Road</p>
-                      <p className="text-gray-600" data-testid="text-address-city">Churchton, MD 20733</p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <MapPin className="text-fresh-blue mt-1 mr-3 h-5 w-5" />
+                      <div>
+                        <p className="text-gray-900 font-medium" data-testid="text-address-street">5623 Shady Side Road</p>
+                        <p className="text-gray-600" data-testid="text-address-city">Churchton, MD 20733</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center">
+                      <Phone className="text-fresh-blue mr-3 h-5 w-5" />
+                      <a 
+                        href="tel:4108671694" 
+                        className="text-gray-900 font-medium hover:text-fresh-blue transition-colors"
+                        data-testid="link-phone"
+                      >
+                        (410) 867-1694
+                      </a>
+                    </div>
+                    <div className="flex items-center">
+                      <FaFacebookF className="text-fresh-blue mr-3 h-5 w-5" />
+                      <a 
+                        href="#" 
+                        onClick={(e) => { e.preventDefault(); openFacebook(); }}
+                        className="text-gray-900 font-medium hover:text-fresh-blue transition-colors"
+                        data-testid="link-facebook"
+                      >
+                        Follow us on Facebook
+                      </a>
                     </div>
                   </div>
-                  <div className="flex items-center">
-                    <Phone className="text-fresh-blue mr-3 h-5 w-5" />
-                    <a 
-                      href="tel:4108671694" 
-                      className="text-gray-900 font-medium hover:text-fresh-blue transition-colors"
-                      data-testid="link-phone"
-                    >
-                      (410) 867-1694
-                    </a>
-                  </div>
-                  <div className="flex items-center">
-                    <FaFacebookF className="text-fresh-blue mr-3 h-5 w-5" />
-                    <a 
-                      href="#" 
-                      onClick={(e) => { e.preventDefault(); openFacebook(); }}
-                      className="text-gray-900 font-medium hover:text-fresh-blue transition-colors"
-                      data-testid="link-facebook"
-                    >
-                      Follow us on Facebook
-                    </a>
+                  <div>
+                    <iframe
+                      src="https://maps.google.com/maps?width=100%&height=200&hl=en&q=5623%20Shady%20Side%20Road,%20Churchton,%20MD%2020733&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                      width="100%"
+                      height="200"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="rounded-lg shadow-sm"
+                      data-testid="iframe-google-maps"
+                    ></iframe>
                   </div>
                 </div>
                 <div className="mt-6">
