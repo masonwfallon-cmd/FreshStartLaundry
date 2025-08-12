@@ -1,0 +1,423 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Start Laundry Co. - Professional Laundromat Services in Churchton, MD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fresh-blue': '#2563EB',
+                        'fresh-blue-light': '#EFF6FF',
+                        'fresh-blue-dark': '#1E40AF',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="font-inter bg-white">
+    <!-- @COMPONENT: Header [navigation and contact info] -->
+    <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-fresh-blue">Fresh Start Laundry Co.</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-6 text-sm">
+                    <div class="flex items-center text-gray-600">
+                        <i class="fas fa-phone text-fresh-blue mr-2"></i>
+                        <span data-bind="business.phone">(410) 867-1694</span>
+                    </div>
+                    <div class="flex items-center text-gray-600">
+                        <i class="fas fa-clock text-fresh-blue mr-2"></i>
+                        <span data-bind="business.hours">Open 7:30am–6pm Daily</span>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-fresh-blue">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <!-- @COMPONENT: Hero [main banner with CTA] -->
+    <section class="bg-gradient-to-br from-fresh-blue-light to-white py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        Your <span class="text-fresh-blue">Fresh Start</span> 
+                        <br>Begins Here
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Professional laundromat services in Churchton, MD. Clean facilities, modern equipment, and affordable pricing for all your laundry needs.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button data-event="click:scrollToServices" class="bg-fresh-blue text-white px-8 py-4 rounded-lg font-semibold hover:bg-fresh-blue-dark transition-colors shadow-lg">
+                            View Our Services
+                        </button>
+                        <button data-event="click:callBusiness" class="border-2 border-fresh-blue text-fresh-blue px-8 py-4 rounded-lg font-semibold hover:bg-fresh-blue hover:text-white transition-colors">
+                            <i class="fas fa-phone mr-2"></i>
+                            Call Now
+                        </button>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <!-- Modern laundromat with bright blue washing machines in a clean, well-lit facility -->
+                    <img src="https://pixabay.com/get/g6d62ed8d4fbc72db51bcba2beb2cdba356eaae8f8593db058a22689b4a0bda5527c8474732553421a1f5090f8245e4a6dedba4f70b20c5a203571856162b6461_1280.jpg" alt="Modern laundromat facility" class="rounded-2xl shadow-2xl w-full h-auto" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero -->
+
+    <!-- @COMPONENT: Services [services and pricing grid] -->
+    <section id="services" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Complete Laundry Services
+                </h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    From self-service washing to professional cleaning, we offer comprehensive laundry solutions at competitive prices.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- @MAP: services.map(service => ( -->
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow" data-mock="true">
+                    <div class="text-fresh-blue text-3xl mb-4">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3" data-bind="service.name">Self-Service Washing</h4>
+                    <p class="text-gray-600 mb-4" data-bind="service.description">Clean, modern washers available in multiple sizes for your convenience.</p>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Small Load</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.small">$3.50</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Large Load</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.large">$5.25</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Extra Large</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.xl">$7.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow" data-mock="true">
+                    <div class="text-fresh-blue text-3xl mb-4">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3" data-bind="service.name">Drying Services</h4>
+                    <p class="text-gray-600 mb-4" data-bind="service.description">High-efficiency dryers that get your clothes perfectly dry every time.</p>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">10 Minutes</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.time1">$0.25</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">30 Minutes</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.time2">$2.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">60 Minutes</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.time3">$3.75</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow" data-mock="true">
+                    <div class="text-fresh-blue text-3xl mb-4">
+                        <i class="fas fa-hands-wash"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3" data-bind="service.name">Wash & Fold Service</h4>
+                    <p class="text-gray-600 mb-4" data-bind="service.description">Professional wash, dry, and fold service for ultimate convenience.</p>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Per Pound</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.pound">$1.75</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Minimum</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.minimum">$15.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Same Day</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.sameday">+$5.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow" data-mock="true">
+                    <div class="text-fresh-blue text-3xl mb-4">
+                        <i class="fas fa-shirt"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3" data-bind="service.name">Dry Cleaning</h4>
+                    <p class="text-gray-600 mb-4" data-bind="service.description">Professional dry cleaning for delicate and special garments.</p>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Dress Shirt</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.shirt">$4.50</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Suit (2-piece)</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.suit">$18.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Dress</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.dress">$12.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow" data-mock="true">
+                    <div class="text-fresh-blue text-3xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3" data-bind="service.name">Household Items</h4>
+                    <p class="text-gray-600 mb-4" data-bind="service.description">Cleaning services for comforters, blankets, and other large items.</p>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Comforter</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.comforter">$25.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Blanket</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.blanket">$15.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Sleeping Bag</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.sleepingbag">$20.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow" data-mock="true">
+                    <div class="text-fresh-blue text-3xl mb-4">
+                        <i class="fas fa-soap"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3" data-bind="service.name">Detergent & Supplies</h4>
+                    <p class="text-gray-600 mb-4" data-bind="service.description">Quality detergent, fabric softener, and other laundry essentials.</p>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Detergent (small)</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.detergent_s">$1.50</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Fabric Softener</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.softener">$1.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Bleach</span>
+                            <span class="font-semibold text-fresh-blue" data-bind="service.price.bleach">$1.25</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Services -->
+
+    <!-- @COMPONENT: Hours and Location [business info cards] -->
+    <section class="py-16 lg:py-24 bg-fresh-blue-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="text-fresh-blue text-3xl mr-4">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Business Hours</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <!-- @MAP: businessHours.map(day => ( -->
+                        <div class="flex justify-between items-center" data-mock="true">
+                            <span class="text-gray-600 font-medium" data-bind="day.name">Monday - Sunday</span>
+                            <span class="text-gray-900 font-semibold" data-bind="day.hours">7:30am - 6:00pm</span>
+                        </div>
+                        <!-- @END_MAP )) -->
+                    </div>
+                    <div class="mt-6 p-4 bg-fresh-blue-light rounded-lg">
+                        <p class="text-sm text-gray-600">
+                            <i class="fas fa-info-circle text-fresh-blue mr-2"></i>
+                            Last wash accepted 1 hour before closing
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="text-fresh-blue text-3xl mr-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Location & Contact</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-pin text-fresh-blue mt-1 mr-3"></i>
+                            <div>
+                                <p class="text-gray-900 font-medium" data-bind="business.address.street">5623 Shady Side Road</p>
+                                <p class="text-gray-600" data-bind="business.address.city">Churchton, MD 20733</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-fresh-blue mr-3"></i>
+                            <a href="tel:4108671694" class="text-gray-900 font-medium hover:text-fresh-blue transition-colors" data-bind="business.phone">(410) 867-1694</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-facebook text-fresh-blue mr-3"></i>
+                            <a href="#" data-event="click:openFacebook" class="text-gray-900 font-medium hover:text-fresh-blue transition-colors" data-bind="business.facebook">Follow us on Facebook</a>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button data-event="click:getDirections" class="w-full bg-fresh-blue text-white py-3 px-6 rounded-lg font-semibold hover:bg-fresh-blue-dark transition-colors">
+                            <i class="fas fa-directions mr-2"></i>
+                            Get Directions
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hours and Location -->
+
+    <!-- @COMPONENT: Features [why choose us section] -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Why Choose Fresh Start Laundry?
+                </h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We're committed to providing the best laundry experience in Churchton with modern equipment and exceptional service.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- @MAP: features.map(feature => ( -->
+                <div class="text-center" data-mock="true">
+                    <div class="bg-fresh-blue-light w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-sparkles text-fresh-blue text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2" data-bind="feature.title">Always Clean</h4>
+                    <p class="text-gray-600" data-bind="feature.description">Spotless facilities maintained to the highest standards daily.</p>
+                </div>
+
+                <div class="text-center" data-mock="true">
+                    <div class="bg-fresh-blue-light w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cog text-fresh-blue text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2" data-bind="feature.title">Modern Equipment</h4>
+                    <p class="text-gray-600" data-bind="feature.description">State-of-the-art washers and dryers for superior cleaning results.</p>
+                </div>
+
+                <div class="text-center" data-mock="true">
+                    <div class="bg-fresh-blue-light w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-dollar-sign text-fresh-blue text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2" data-bind="feature.title">Fair Pricing</h4>
+                    <p class="text-gray-600" data-bind="feature.description">Competitive rates with no hidden fees or surprises.</p>
+                </div>
+
+                <div class="text-center" data-mock="true">
+                    <div class="bg-fresh-blue-light w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-fresh-blue text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2" data-bind="feature.title">Safe & Secure</h4>
+                    <p class="text-gray-600" data-bind="feature.description">Well-lit, monitored facility for your peace of mind.</p>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Features -->
+
+    <!-- @COMPONENT: CTA [call to action section] -->
+    <section class="py-16 lg:py-24 bg-fresh-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Ready for Your Fresh Start?
+            </h3>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Visit us today in Churchton, MD and experience the difference professional laundry care makes. No appointment necessary!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button data-event="click:callBusiness" class="bg-white text-fresh-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+                    <i class="fas fa-phone mr-2"></i>
+                    Call (410) 867-1694
+                </button>
+                <button data-event="click:getDirections" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-fresh-blue transition-colors">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    Get Directions
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: CTA -->
+
+    <!-- @COMPONENT: Footer [simple footer with contact info] -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-fresh-blue">Fresh Start Laundry Co.</h4>
+                    <p class="text-gray-300 mb-4">Your trusted neighborhood laundromat in Churchton, MD. Professional laundry services with a personal touch.</p>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Contact Info</h5>
+                    <div class="space-y-2 text-gray-300">
+                        <p data-bind="business.address">5623 Shady Side Road, Churchton, MD 20733</p>
+                        <p data-bind="business.phone">(410) 867-1694</p>
+                        <p data-bind="business.hours">Open Daily: 7:30am - 6:00pm</p>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-semibold mb-4">Connect With Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" data-event="click:openFacebook" class="text-gray-300 hover:text-fresh-blue transition-colors">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Fresh Start Laundry Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // TODO: Implement smooth scrolling functionality
+        (function() {
+            // Smooth scrolling for anchor links
+            document.addEventListener('DOMContentLoaded', function() {
+                // TODO: Add smooth scroll behavior for navigation
+                
+                // TODO: Implement mobile menu toggle
+                
+                // TODO: Add phone call functionality
+                
+                // TODO: Implement directions link
+                
+                // TODO: Add Facebook page integration
+            });
+        })();
+    </script>
+</body>
+</html>
