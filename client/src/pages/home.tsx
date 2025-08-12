@@ -492,9 +492,8 @@ export default function Home() {
               Call (410) 867-1694
             </Button>
             <Button 
-              variant="outline"
               onClick={getDirections}
-              className="border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-fresh-blue"
+              className="bg-white text-fresh-blue border-2 border-white px-8 py-4 font-semibold hover:bg-gray-100 shadow-lg"
               data-testid="button-cta-directions"
             >
               <MapPin className="mr-2 h-4 w-4" />
