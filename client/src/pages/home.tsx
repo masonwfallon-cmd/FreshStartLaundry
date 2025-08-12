@@ -4,6 +4,7 @@ import { Phone, Clock, MapPin, Star, Sparkles, Settings, DollarSign, Shield, Men
 import { FaFacebookF, FaTshirt, FaWind, FaHandsWash, FaHome, FaSoap } from "react-icons/fa";
 import { useState } from "react";
 
+
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -31,7 +32,7 @@ export default function Home() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
               <img 
-                src="@assets/434250957_6929304850509572_7110639757229494361_n_1755013469187.jpg" 
+                src="/logo.jpg" 
                 alt="Fresh Start Laundry Co. Logo" 
                 className="h-12 w-auto"
                 data-testid="img-company-logo"
@@ -108,7 +109,7 @@ export default function Home() {
             </div>
             <div className="hidden lg:block">
               <img 
-                src="@assets/434250957_6929304850509572_7110639757229494361_n_1755013469187.jpg" 
+                src="/logo.jpg" 
                 alt="Fresh Start Laundry Co. Logo" 
                 className="rounded-2xl shadow-2xl w-full h-auto max-w-md mx-auto"
                 data-testid="img-hero-logo"
