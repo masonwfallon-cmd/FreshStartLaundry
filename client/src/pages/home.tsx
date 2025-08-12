@@ -493,6 +493,91 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4" data-testid="text-testimonials-title">
+              What Our Customers Say
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-testid="text-testimonials-description">
+              Don't just take our word for it - hear from our satisfied customers who trust us with their laundry needs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <Card className="hover:shadow-lg transition-shadow" data-testid="card-testimonial-1">
+              <CardContent className="p-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-4 italic" data-testid="text-testimonial-1-quote">
+                  "Fresh Start has been a lifesaver! Their pickup and delivery service is so convenient, and my clothes always come back perfectly clean and folded. The staff is friendly and professional."
+                </p>
+                <div className="flex items-center">
+                  <div className="bg-fresh-blue-light w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-fresh-blue font-semibold">SM</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900" data-testid="text-testimonial-1-name">Sarah M.</p>
+                    <p className="text-gray-500 text-sm" data-testid="text-testimonial-1-location">Churchton Resident</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Testimonial 2 */}
+            <Card className="hover:shadow-lg transition-shadow" data-testid="card-testimonial-2">
+              <CardContent className="p-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-4 italic" data-testid="text-testimonial-2-quote">
+                  "I've been using Fresh Start for over a year now. Their comforter cleaning service is exceptional - my down comforter looks and feels like new every time. Great pricing too!"
+                </p>
+                <div className="flex items-center">
+                  <div className="bg-fresh-blue-light w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-fresh-blue font-semibold">MJ</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900" data-testid="text-testimonial-2-name">Mike J.</p>
+                    <p className="text-gray-500 text-sm" data-testid="text-testimonial-2-location">Deale, MD</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Testimonial 3 */}
+            <Card className="hover:shadow-lg transition-shadow" data-testid="card-testimonial-3">
+              <CardContent className="p-6">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-4 italic" data-testid="text-testimonial-3-quote">
+                  "Clean facility, modern equipment, and always helpful staff. Fresh Start makes doing laundry actually pleasant. The wash and fold service saves me so much time!"
+                </p>
+                <div className="flex items-center">
+                  <div className="bg-fresh-blue-light w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-fresh-blue font-semibold">LR</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900" data-testid="text-testimonial-3-name">Lisa R.</p>
+                    <p className="text-gray-500 text-sm" data-testid="text-testimonial-3-location">Tracys Landing, MD</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-fresh-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
