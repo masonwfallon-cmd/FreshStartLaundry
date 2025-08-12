@@ -247,21 +247,40 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Pickup & Delivery Service */}
-            <Card className="hover:shadow-lg transition-shadow" data-testid="card-service-pickup-delivery">
+            {/* Pillows */}
+            <Card className="hover:shadow-lg transition-shadow" data-testid="card-service-pillows">
               <CardContent className="p-6">
                 <div className="text-fresh-blue text-3xl mb-4">
-                  <FaTruck />
+                  <FaSoap />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-3" data-testid="text-service-pickup-title">Pickup & Delivery</h4>
-                <p className="text-gray-600 mb-4" data-testid="text-service-pickup-description">Complimentary pickup and delivery service for your convenience.</p>
+                <h4 className="text-xl font-semibold text-gray-900 mb-3" data-testid="text-service-pillows-title">Pillows</h4>
+                <p className="text-gray-600 mb-4" data-testid="text-service-pillows-description">Professional pillow cleaning for all sizes and materials.</p>
                 <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">All Items</span>
-                    <span className="font-semibold text-fresh-blue" data-testid="text-price-pickup-delivery">$1.60/lb</span>
+                  <div className="text-sm font-medium text-gray-700 mb-2">Down Pillows:</div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">Small</span>
+                    <span className="font-semibold text-fresh-blue" data-testid="text-price-down-pillow-small">$7.00</span>
                   </div>
-                  <div className="mt-3 p-3 bg-fresh-blue-light rounded-lg">
-                    <p className="text-sm text-fresh-blue font-medium">Free pickup and delivery within service area</p>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">Medium</span>
+                    <span className="font-semibold text-fresh-blue" data-testid="text-price-down-pillow-medium">$12.00</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">California King</span>
+                    <span className="font-semibold text-fresh-blue" data-testid="text-price-down-pillow-cal">$15.00</span>
+                  </div>
+                  <div className="text-sm font-medium text-gray-700 mb-2 mt-3">Polyester Pillows:</div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">Small</span>
+                    <span className="font-semibold text-fresh-blue" data-testid="text-price-poly-pillow-small">$5.00</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">Medium</span>
+                    <span className="font-semibold text-fresh-blue" data-testid="text-price-poly-pillow-medium">$8.00</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">California King</span>
+                    <span className="font-semibold text-fresh-blue" data-testid="text-price-poly-pillow-cal">$10.00</span>
                   </div>
                 </div>
               </CardContent>
@@ -304,40 +323,21 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Pillows */}
-            <Card className="hover:shadow-lg transition-shadow" data-testid="card-service-pillows">
+            {/* Pickup & Delivery Service */}
+            <Card className="hover:shadow-lg transition-shadow" data-testid="card-service-pickup-delivery">
               <CardContent className="p-6">
                 <div className="text-fresh-blue text-3xl mb-4">
-                  <FaSoap />
+                  <FaTruck />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-3" data-testid="text-service-pillows-title">Pillows</h4>
-                <p className="text-gray-600 mb-4" data-testid="text-service-pillows-description">Professional pillow cleaning for all sizes and materials.</p>
+                <h4 className="text-xl font-semibold text-gray-900 mb-3" data-testid="text-service-pickup-title">Pickup & Delivery</h4>
+                <p className="text-gray-600 mb-4" data-testid="text-service-pickup-description">Complimentary pickup and delivery service for your convenience.</p>
                 <div className="space-y-2">
-                  <div className="text-sm font-medium text-gray-700 mb-2">Down Pillows:</div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">Small</span>
-                    <span className="font-semibold text-fresh-blue" data-testid="text-price-down-pillow-small">$7.00</span>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">All Items</span>
+                    <span className="font-semibold text-fresh-blue" data-testid="text-price-pickup-delivery">$1.60/lb</span>
                   </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">Medium</span>
-                    <span className="font-semibold text-fresh-blue" data-testid="text-price-down-pillow-medium">$12.00</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">California King</span>
-                    <span className="font-semibold text-fresh-blue" data-testid="text-price-down-pillow-cal">$15.00</span>
-                  </div>
-                  <div className="text-sm font-medium text-gray-700 mb-2 mt-3">Polyester Pillows:</div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">Small</span>
-                    <span className="font-semibold text-fresh-blue" data-testid="text-price-poly-pillow-small">$5.00</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">Medium</span>
-                    <span className="font-semibold text-fresh-blue" data-testid="text-price-poly-pillow-medium">$8.00</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">California King</span>
-                    <span className="font-semibold text-fresh-blue" data-testid="text-price-poly-pillow-cal">$10.00</span>
+                  <div className="mt-3 p-3 bg-fresh-blue-light rounded-lg">
+                    <p className="text-sm text-fresh-blue font-medium">Free pickup and delivery within service area</p>
                   </div>
                 </div>
               </CardContent>
