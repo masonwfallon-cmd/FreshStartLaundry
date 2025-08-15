@@ -334,7 +334,7 @@ export default function Home() {
                 <div className="space-y-2">
                   <div className="flex justify-between">
                     <span className="text-gray-600">All Items</span>
-                    <span className="font-semibold text-fresh-blue" data-testid="text-price-pickup-delivery">$1.50/lb</span>
+                    <span className="font-semibold text-fresh-blue" data-testid="text-price-pickup-delivery">$1.60/lb</span>
                   </div>
                   <div className="mt-3 p-3 bg-fresh-blue-light rounded-lg">
                     <p className="text-sm text-fresh-blue font-medium">Free pickup and delivery within service area</p>
